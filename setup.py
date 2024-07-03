@@ -9,10 +9,11 @@ raw1394_module = Extension('_raw1394',
 	libraries=['raw1394'],
 )
 
-setup (name = 'python-pyraw1394',
+setup (name = 'pyraw1394',
 	version = '0.1.0',
 	author      = "martin.spinler@gmail.com",
 	description = """raw1394 python module""",
 	ext_modules = [raw1394_module],
 	py_modules = ["raw1394"],
+	setup_requires = ["setuptools"],
 )
