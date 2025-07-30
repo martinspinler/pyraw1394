@@ -3,17 +3,15 @@
 from distutils.core import setup, Extension
 
 raw1394_module = Extension('_raw1394',
-	sources=['pyraw1394.i', 'pyraw1394.cxx'],
+	sources=['raw1394/pyraw1394.i', 'raw1394/pyraw1394.cxx'],
 	swig_opts=['-c++'],
 	extra_compile_args=['-std=c++11'],
 	libraries=['raw1394'],
 )
 
-setup (name = 'pyraw1394',
-	version = '0.1.0',
-	author      = "martin.spinler@gmail.com",
-	description = """raw1394 python module""",
+setup (
 	ext_modules = [raw1394_module],
-	py_modules = ["raw1394"],
-	setup_requires = ["setuptools"],
+    py_modules=['raw1394'],
+    packages=['raw1394'],
+    package_dir={'raw1394': 'raw1394'},
 )

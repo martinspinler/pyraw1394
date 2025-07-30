@@ -1,0 +1,12 @@
+[project]
+name = "raw1394"
+description = "Python library for raw access to FireWire device"
+version = "0.1.0"
+authors = [
+    { name = "Martin Spinler", email = "martin.spinler@gmail.com" }
+]
+[build-system]
+requires = [
+    "setuptools"
+]
+build-backend = "setuptools.build_meta"
