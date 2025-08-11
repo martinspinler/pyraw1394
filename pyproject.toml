@@ -1,12 +1,20 @@
 [project]
 name = "raw1394"
 description = "Python library for raw access to FireWire device"
-version = "0.1.0"
+version = "0.2.0"
 authors = [
     { name = "Martin Spinler", email = "martin.spinler@gmail.com" }
 ]
+
 [build-system]
 requires = [
-    "setuptools"
+    "Cython",
+    "setuptools",
 ]
 build-backend = "setuptools.build_meta"
+
+[[tool.setuptools.ext-modules]]
+name = "raw1394"
+sources = ["raw1394/raw1394.pyx", "raw1394/pyraw1394.cxx"]
+language = "c++"
+libraries = ["raw1394"]
